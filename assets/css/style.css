@@ -1,0 +1,54 @@
+
+#logo-splash{
+	width: auto;
+}
+
+.content{
+	/*alto y ancho capa splash*/
+	height: 100%;
+	width: 100%;
+	z-index: 100;
+	position: absolute;
+	padding-top: 45vh; /*'vh' altura de la ventana*/
+	background: linear-gradient(#40004D,#D00074);
+}
+
+.content img{
+	height: 10vh;
+	width: 100%;
+}
+
+/* Log in / Sign up */
+
+.content2{
+	background-image: url(../img/road.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100vh;
+	padding: 3vh;
+	display: none;
+}
+
+.content2 img{
+	height: 5em;
+	width: auto;
+}
+
+#logo-lyfe{
+	height: 100%;
+	width: 100%;
+	padding-top: 15vh;
+}
+
+.content2 .btn {
+	color: #FFF;
+	background: transparent;
+	border: 2px solid #FFF;
+}
+
+.options{
+	margin-bottom: 10px;
+	bottom: -120px;
+}
+
