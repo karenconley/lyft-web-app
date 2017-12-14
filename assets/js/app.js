@@ -1,10 +1,9 @@
-//.js Lyft
-/*Inicializando*/
 $(document).ready(function(){
-/*splash*/
+
+/*Splash*/
 	setTimeout(function() {
 		$(".content").fadeOut(800);
-		},3000);
+		},2500);
 		setTimeout(function() {
 			$(".content2").fadeIn(1000);
 		});
