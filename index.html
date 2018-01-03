@@ -14,8 +14,51 @@
 </head>
 
 <body>
+	<!-- Modal -->
+	<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Sign Up</h4>
+			</div>
+			<div class="modal-body row">
+				<!-- opciones países -->
+				<div class="col-xs-9 col-sm-9">
+					<label>Country:</label>
+					<select name="" id="country">
+						<option value="cl">Chile</option>
+						<option value="pe">Perú</option>
+						<option value="mx">México</option>
+					</select>
+				</div>
+
+				<!-- número de teléfono -->
+				<div class="col-xs-9 col-sm-9">
+					<label>Phone Number:</label>
+					<input id="phoneNumber" name="phoneNumber" type="tel" placeholder="number of 10 digits" required>
+					<p id="contNumber"></p>
+				</div>
+			</div> <!-- /.modal-body row -->
+
+			<div class="modal-footer">
+				<p class="text-center">We'll send a text to verify your phone</p>
+				<div class="row">
+					<div class="col-xs-9 col-sm-9">
+						<button id="codeButton" data-toogle="modal" type="submit" class="btn btn-warning btn-md center-block disabled">Generate Code</button>
+					</div>
+					<div class="col-xs-9 col-sm-9">
+						<button id="verifyButton" data-toogle="modal" type="submit" class="btn btn-primary btn-md center-block">Verify</button>
+					</div>
+				</div>
+			</div> <!-- /.modal-footer -->
+		</div>
+	</div>
+</div>
+
+
 	<!-- Splash -->
-	<div class="container-fluid content">
+	<div class="container-fluid intro">
 		<div class="row">
 			<div class="col-xs-12 col-sm-12">
 				<img class="img-responsive center-block" id="logo-splash" src="assets/img/logo-white.png" alt="logo">
@@ -25,7 +68,7 @@
 
 
 	<!-- Log in / Sign up -->
-	<div class="container-fluid content2">
+	<div class="container-fluid home" style="display:none">
 		<img class="center-block" src="assets/img/logo-white.png" alt="">
 			<div class="row">
 				<div class="col-xs-12 col-sm-12">
@@ -37,13 +80,23 @@
 					<button class="btn btn-lg center-block">Log In</button>
 				</div>
 				<div class="col-xs-6 col-sm-6 options">
-					<button class="btn btn-lg center-block">Sign Up</button>
+					<!-- botón que activa el modal -->
+					<button data-toggle="modal" id="myModal" data-target=”#modal1” class="btn btn-lg center-block">Sign Up</button>
 				</div>
 			</div>
 	</div>
 
+<!-- Sign Up -->
+	<section class="container-fluid signUp" style="display:none">
+		<h3>Verify phone number</h3>
+		<p>Join now for free ride credit</p>
+		<input name="code" type="tel" placeholder="3 digits" required>
+		<button type="submit" class="btn btn-primary btn-sm pull-rigth">Send</button>
+
+	</section>
 
 <!-- jQuery -->
+<script></script>
 <script src="assets/js/jquery-3.2.1.min.js"></script>
 <!-- JS Bootstrap -->
 <script src="assets/js/bootstrap.min.js"></script>
